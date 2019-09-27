@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: shop-zuul
+eureka:
+  client:
+    #是否从注册中心抓取服务（消费方开启）
+    fetch-registry: true
+    # 是否注册到注册中心（服务方开启）
+    register-with-eureka: false
+    # 表示注册中心的地址
+    service-url:
+      # Eureka的地址
+      defaultZone: http://localhost:7961/eureka/
+  instance:
+    # 将服务的IP地址信息注册到 Eureka上
+    prefer-ip-address: true
+
+zuul:
+  routes:
+    # 别名，无固定形式（一般使用服务名）
+    server:
+      # 绑定服务
+      serviceId: user
+      # 设置服务访问路径
+      path: /use/**
+  # 前缀
+  prefix: /v1
+  # 忽略所有默认路径（单一入口）
+  ignored-services: "*"
