@@ -1,0 +1,17 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:7961/eureka/
+
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: user
+
+feign:
+  hystrix:
+    enabled: true
