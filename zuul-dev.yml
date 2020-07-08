@@ -1,16 +1,16 @@
 spring:
   application:
-    name: shop-zuul
+    name: zuul
 
 zuul:
   routes:
     # 别名，无固定形式（一般使用服务名）
     server:
       # 绑定服务
-      serviceId: user
+      serviceId: p1
       # 设置服务访问路径
-      path: /use/**
+      path: /p1/**
   # 前缀
-  prefix: /v1
+  prefix: /zuul
   # 忽略所有默认路径（单一入口）
   ignored-services: "*"
