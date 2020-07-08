@@ -1,11 +1,11 @@
 spring:
   application:
-    name: zuul
+    name: zuul-server
 
 zuul:
   routes:
     # 别名，无固定形式（一般使用服务名）
-    server:
+    p1:
       # 绑定服务
       serviceId: p1
       # 设置服务访问路径
