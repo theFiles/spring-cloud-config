@@ -10,7 +10,7 @@ zuul:
       serviceId: p1
       # 设置服务访问路径
       path: /p1/**
-  # 前缀
-  prefix: /zuul
+  # 接口路径
+  servlet-path: /lidaye
   # 忽略所有默认路径（单一入口）
   ignored-services: "*"
